@@ -1,0 +1,25 @@
+{
+  "name": "class-05-tdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "seed": "node ./seed",
+    "test": "npx mocha --parallel **/**/*.test.js",
+    "test:dev": "npx mocha -w --parallel **/**/*.test.js",
+    "test:cov": "npx nyc mocha --parallel **/**/*.test.js"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "keywords": [],
+  "author": "Lucas Livero",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^8.2.0",
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "sinon": "^17.0.0"
+  }
+}
