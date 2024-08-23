@@ -1,0 +1,9 @@
+list(Infinity)
+setBreakpoint(13)
+cont
+exec req
+exec req.url
+exec new URLSearchParams(req.url).get('discount')
+exec new URLSearchParams(req.url).get('salary')
+.help
+help

@@ -1,0 +1,14 @@
+{
+  "name": "repl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "inspect": "node inspect index.js",
+    "debug": "node --inspect index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

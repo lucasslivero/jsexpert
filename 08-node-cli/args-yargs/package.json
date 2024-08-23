@@ -1,0 +1,17 @@
+{
+  "name": "args-yargs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "native": "node cli-native.mjs --name Lucas --age 27",
+    "yargs": "node cli-yargs.mjs CreateHero --name Kesya --age 27 --role lawyer",
+    "exec": "./cli-yargs.mjs CreateHero --name Lucas --age 28 --role Dev"
+  },
+  "dependencies": {
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.0"
+  }
+}
