@@ -1,4 +1,4 @@
-import Util from "../util";
+import Util from "../util.js";
 
 const componentNameAnchor = "$$componentName";
 
@@ -10,7 +10,7 @@ const repositoryNameAnchor = "$$repositoryName";
 
 const template = `
 import $$serviceName from '../service/$$serviceNameDep.js'
-import $$repositoryName from '../repositories/$$repositoryNameDep.js'
+import $$repositoryName from '../repository/$$repositoryNameDep.js'
 
 export default class $$componentNameFactory {
 

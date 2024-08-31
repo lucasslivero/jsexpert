@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, jest, test } from "@jest/globals";
-import Util from "../../src/util";
+import Util from "../../src/util.js";
 
 describe("#Util - String", () => {
   beforeEach(() => {
