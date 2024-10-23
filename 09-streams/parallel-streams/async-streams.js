@@ -1,3 +1,4 @@
+import { Readable } from "stream";
 import { pipeline } from "stream/promises";
 import { setTimeout } from "timers/promises";
 
@@ -9,7 +10,8 @@ async function* myCustomReadable() {
 
 async function* myCustomTransform(stream) {
   for await (const chunk of stream) {
-    yield chunk.toString().replace(/\s/g, "_");
+    console.log("[Transform]", chunk);
+    yield chunk.replace(/\s/g, "_");
   }
 }
 
@@ -28,18 +30,23 @@ async function* myCustomDuplex(stream) {
 
 async function* myCustomWritable(stream) {
   for await (const chunk of stream) {
-    console.log("[writable]", chunk.toString());
+    console.log("[writable]", chunk);
   }
 }
 
 try {
   const controller = new AbortController();
 
-  setImmediate(() => controller.abort());
+  // setImmediate(() => controller.abort());
 
-  await pipeline(myCustomReadable, myCustomTransform, myCustomDuplex, myCustomWritable, {
+  const readable = Readable.from(myCustomReadable());
+  readable.setEncoding("utf-8");
+
+  await pipeline(readable, myCustomTransform, myCustomDuplex, myCustomWritable, {
     signal: controller.signal,
   });
 } catch (error) {
   console.error(error.message);
 }
+
+console.log("Done !");
