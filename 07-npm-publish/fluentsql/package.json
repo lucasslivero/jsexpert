@@ -1,6 +1,6 @@
 {
   "name": "@lucaslivero/fluentsql-v2",
-  "version": "1.0.0",
+  "version": "2.0.4",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -10,8 +10,15 @@
     "test:cov": "NODE_OPTIONS=--experimental-vm-modules npx jest --config jest.config.mjs --coverage ",
     "test:watch": "NODE_OPTIONS=--experimental-vm-modules npx jest --config jest.config.mjs --watchAll "
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucasslivero/fluentsql.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "keywords": [],
-  "author": "erickwendel",
+  "author": "Lucas Livero",
   "license": "ISC",
   "devDependencies": {
     "jest": "^26.6.3"
