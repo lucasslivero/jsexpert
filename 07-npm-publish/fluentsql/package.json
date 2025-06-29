@@ -1,6 +1,6 @@
 {
-  "name": "@lucaslivero/fluentsql-v2",
-  "version": "2.0.4",
+  "name": "@lucasslivero/fluentsql-v2",
+  "version": "2.0.1",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -12,10 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lucasslivero/fluentsql.git"
+    "url": "https://github.com/lucasslivero/jsexpert.git",
+    "directory": "07-npm-publish/fluentsql"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
   },
   "keywords": [],
   "author": "Lucas Livero",
